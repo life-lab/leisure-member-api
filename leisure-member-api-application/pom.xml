@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>leisure-member-api</artifactId>
-        <groupId>com.github.hicolors.leisure</groupId>
+        <groupId>com.github.hicolors.leisure.api</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -24,8 +24,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.github.hicolors.leisure</groupId>
+            <artifactId>leisure-member-sdk</artifactId>
+            <version>${leisure-member.version}</version>
         </dependency>
 
         <dependency>

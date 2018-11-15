@@ -7,4 +7,5 @@ server:
 
 leisure-member:
   ribbon:
-    listOfServers: http://127.0.0.1:8080/leisure-member,http://47.105.97.16:8080/leisure-member
+    listOfServers: http://127.0.0.1:8888,http://47.105.97.16:8080
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
