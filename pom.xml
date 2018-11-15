@@ -16,6 +16,7 @@
 
     <modules>
 
+        <module>leisure-member-api-application</module>
     </modules>
 
 </project>
