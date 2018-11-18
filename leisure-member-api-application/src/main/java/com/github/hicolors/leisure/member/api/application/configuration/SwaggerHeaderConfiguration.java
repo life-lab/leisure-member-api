@@ -1,5 +1,6 @@
 package com.github.hicolors.leisure.member.api.application.configuration;
 
+import com.github.hicolors.leisure.backend.gateway.sdk.consts.AuthenticationConsts;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ParameterBuilder;
@@ -16,9 +17,19 @@ import springfox.documentation.service.Parameter;
 public class SwaggerHeaderConfiguration {
 
     @Bean
-    public Parameter parameter() {
-        return new ParameterBuilder().name("access-token")
+    public Parameter accessToken() {
+        return new ParameterBuilder().name(AuthenticationConsts.HEADER_AUTHENTICATION)
                 .description("访问令牌")
+                .modelRef(new ModelRef("string"))
+                .parameterType("header")
+                .required(false)
+                .build();
+    }
+
+    @Bean
+    public Parameter userInfo() {
+        return new ParameterBuilder().name(AuthenticationConsts.HEADER_USER_INFO)
+                .description("用户信息")
                 .modelRef(new ModelRef("string"))
                 .parameterType("header")
                 .required(false)
