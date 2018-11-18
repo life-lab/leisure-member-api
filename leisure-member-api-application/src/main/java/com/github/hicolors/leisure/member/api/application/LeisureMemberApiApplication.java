@@ -1,6 +1,6 @@
 package com.github.hicolors.leisure.member.api.application;
 
-import com.github.hicolors.leisure.common.utils.JsonUtils;
+import com.github.hicolors.leisure.member.authorization.token.UserInfo;
 import com.github.hicolors.leisure.member.model.persistence.Member;
 import com.github.hicolors.leisure.member.sdk.MemberClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * LeisureMemberApiApplication
@@ -30,7 +31,7 @@ public class LeisureMemberApiApplication {
     }
 
     @GetMapping("/xxx/{id}")
-    public Member get(@PathVariable("id") Long id){
+    public Member get(@ApiIgnore UserInfo userInfo, @PathVariable("id") Long id) {
         return memberClient.queryOneById(id);
     }
 }
