@@ -4,7 +4,3 @@ logging:
 server:
   servlet:
     context-path: /leisure-member-api
-
-leisure-member:
-  ribbon:
-    listOfServers: http://47.105.97.16:100002
