@@ -4,8 +4,8 @@ import com.github.life.lab.leisure.member.authorization.token.impl.AuthToken;
 import com.github.life.lab.leisure.member.model.persistence.Member;
 import com.github.life.lab.leisure.member.sdk.MemberClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -16,6 +16,7 @@ import springfox.documentation.annotations.ApiIgnore;
  * @date 2018-11-24
  */
 @RestController
+@RequestMapping("/member")
 public class MemberRest {
 
     @Autowired
