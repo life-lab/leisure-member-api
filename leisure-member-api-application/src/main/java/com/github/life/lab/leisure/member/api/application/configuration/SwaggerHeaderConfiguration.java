@@ -1,6 +1,6 @@
-package com.github.hicolors.leisure.member.api.application.configuration;
+package com.github.life.lab.leisure.member.api.application.configuration;
 
-import com.github.hicolors.leisure.backend.gateway.sdk.consts.AuthenticationConsts;
+import com.github.life.lab.leisure.backend.gateway.sdk.consts.AuthenticationConsts;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ParameterBuilder;

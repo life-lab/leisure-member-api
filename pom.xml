@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.hicolors.leisure.api</groupId>
     <artifactId>leisure-member-api</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>com.github.hicolors</groupId>
+        <groupId>com.github.life-lab</groupId>
         <artifactId>leisure</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.0.2-RELEASE</version>
     </parent>
 
     <modules>
-        <module>leisure-member-api-application</module>
-        <module>leisure-member-api-interface</module>
         <module>leisure-member-api-model</module>
+        <module>leisure-member-api-interface</module>
+        <module>leisure-member-api-application</module>
     </modules>
 
     <properties>
@@ -30,19 +29,19 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.github.hicolors.leisure.api</groupId>
+                <groupId>com.github.life-lab</groupId>
                 <artifactId>leisure-member-api-model</artifactId>
                 <version>${leisure-member-api.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.github.hicolors.leisure.api</groupId>
+                <groupId>com.github.life-lab</groupId>
                 <artifactId>leisure-member-api-interface</artifactId>
                 <version>${leisure-member-api.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.github.hicolors.leisure</groupId>
+                <groupId>com.github.life-lab</groupId>
                 <artifactId>leisure-member-sdk</artifactId>
                 <version>${leisure-member.version}</version>
             </dependency>
