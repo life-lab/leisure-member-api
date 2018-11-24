@@ -1,5 +1,6 @@
 package com.github.life.lab.leisure.member.api.application.rest;
 
+import com.github.life.lab.leisure.member.authorization.token.UserInfo;
 import com.github.life.lab.leisure.member.authorization.token.impl.AuthToken;
 import com.github.life.lab.leisure.member.model.persistence.Member;
 import com.github.life.lab.leisure.member.sdk.MemberClient;
@@ -23,7 +24,7 @@ public class MemberRest {
     private MemberClient memberClient;
 
     @GetMapping
-    public Member find(@ApiIgnore AuthToken token) {
-        return memberClient.queryOneById(token.getId());
+    public Member find(@ApiIgnore UserInfo userInfo) {
+        return memberClient.queryOneById(userInfo.getId());
     }
 }
