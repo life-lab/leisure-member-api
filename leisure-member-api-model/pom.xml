@@ -11,5 +11,17 @@
 
     <artifactId>leisure-member-api-model</artifactId>
 
+    <dependencies>
 
+        <dependency>
+            <groupId>com.github.life-lab</groupId>
+            <artifactId>common-model</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.life-lab</groupId>
+            <artifactId>leisure-member-model</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>

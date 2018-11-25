@@ -1,14 +1,16 @@
 package com.github.life.lab.leisure.member.api.application.rest;
 
+import com.github.life.lab.leisure.member.api.application.service.MemberService;
+import com.github.life.lab.leisure.member.api.intf.MemberApi;
+import com.github.life.lab.leisure.member.api.model.resoures.backend.member.MemberInfo;
+import com.github.life.lab.leisure.member.api.model.resoures.backend.platform.PlatformInfo;
 import com.github.life.lab.leisure.member.authorization.token.UserInfo;
-import com.github.life.lab.leisure.member.authorization.token.impl.AuthToken;
-import com.github.life.lab.leisure.member.model.persistence.Member;
-import com.github.life.lab.leisure.member.sdk.MemberClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
+
+import java.util.List;
 
 /**
  * MemberRest
@@ -18,13 +20,23 @@ import springfox.documentation.annotations.ApiIgnore;
  */
 @RestController
 @RequestMapping("/member")
-public class MemberRest {
+public class MemberRest implements MemberApi {
 
     @Autowired
-    private MemberClient memberClient;
+    private MemberService memberService;
 
-    @GetMapping
-    public Member find(@ApiIgnore UserInfo userInfo) {
-        return memberClient.queryOneById(userInfo.getId());
+    @Override
+    public MemberInfo memberInfo(@ApiIgnore UserInfo userInfo) {
+        return memberService.memberInfo(userInfo);
+    }
+
+    @Override
+    public PlatformInfo primaryPlatform(@ApiIgnore UserInfo userInfo) {
+        return memberService.primaryPlatform(userInfo);
+    }
+
+    @Override
+    public List<PlatformInfo> platform(@ApiIgnore UserInfo userInfo) {
+        return memberService.platform(userInfo);
     }
 }

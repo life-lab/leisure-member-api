@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.github.life-lab</groupId>
         <artifactId>leisure</artifactId>
-        <version>0.0.2-RELEASE</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
     <modules>
@@ -22,6 +22,7 @@
     <properties>
         <leisure-member.version>1.0-SNAPSHOT</leisure-member.version>
         <leisure-member-api.version>1.0-SNAPSHOT</leisure-member-api.version>
+        <leisure-backend-gateway.version>1.0-SNAPSHOT</leisure-backend-gateway.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,19 @@
                 <artifactId>leisure-member-sdk</artifactId>
                 <version>${leisure-member.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.life-lab</groupId>
+                <artifactId>leisure-member-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.life-lab</groupId>
+                <artifactId>leisure-backend-gateway-sdk</artifactId>
+                <version>${leisure-backend-gateway.version}</version>
+            </dependency>
+
 
         </dependencies>
 

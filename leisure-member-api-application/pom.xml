@@ -21,7 +21,6 @@
         <dependency>
             <groupId>com.github.life-lab</groupId>
             <artifactId>leisure-backend-gateway-sdk</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
